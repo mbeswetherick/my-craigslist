@@ -14,7 +14,7 @@
     ],
 	"content_scripts": [
 	{
-		"matches": ["http://*.craigslist.com/*"],
+		"matches": ["http://*.craigslist.org/*"],
 		"css": ["my_craigslist.css"],
 		"js": ["jquery.js", "my_craigslist.js"],
 		"run_at": "document_idle"

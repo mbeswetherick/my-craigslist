@@ -1,12 +1,17 @@
 
-$("body").mouseover(function(){
-    price();
-});
+
+price();
+
+
+var priceArray = [];
 
 function price(){
-	alert('wedep');
-	$(".row").each( function () {
-		var price = this.match('\$\d\+');
-		console.log(price);
+	$("p").each( function () {
+		try {
+	 		var price = $(this).text().match(/\$\d+/);
+	   		console.log(price[0]);
+		} catch (TypeError) {}
 	});
 }
+
+
