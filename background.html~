@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="jquery.js"></script>
+    <script src="my_craigslist.js"></script>     
+    <script>
+      work();
+    </script>
+  </head>
+</html>

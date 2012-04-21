@@ -1,0 +1,23 @@
+{
+	"name": "Mylist",
+	"version": "1.0",
+	"description": "Finds relevant information on craigslist in Seattle.",
+	"manifest_version": 2,
+	"icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png" },
+	"permissions": [
+		"http://*.craigslist.org/",
+		"http://*.craigslist.ca/",
+		"http://*.craigslist.hk/",
+		"http://*.craigslist.co.uk/"
+    ],
+	"content_scripts": [
+	{
+		"matches": ["http://*.craigslist.com/*"],
+		"css": ["my_craigslist.css"],
+		"js": ["jquery.js", "my_craigslist.js"],
+		"run_at": "document_start"
+	 }
+	]
+}
