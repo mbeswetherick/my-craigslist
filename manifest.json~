@@ -16,7 +16,11 @@
 	{
 		"matches": ["http://*.craigslist.org/*"],
 		"css": ["my_craigslist.css"],
-		"js": ["jquery.js", "https://www.google.com/jsapi", "visualization.js", "my_craigslist.js"],
+<<<<<<< HEAD
+		"js": ["jquery.js", "jsapi.js", "visualization.js", "my_craigslist.js"],
+=======
+		"js": ["jquery.js", "my_craigslist.js", "jsapi.js"],
+>>>>>>> ebd25570ae3554c68796bd9deae82210377b9649
 		"run_at": "document_idle"
 	 }
 	]

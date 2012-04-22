@@ -2,8 +2,13 @@
 <html>
   <head>
     <script src="jquery.js"></script>
+<<<<<<< HEAD
 	<script src="jsapi.js"></script>
 	<script src=visualization.js"></script>
     <script src="my_craigslist.js"></script>   
+=======
+    <script src="my_craigslist.js"></script>     
+    
+>>>>>>> ebd25570ae3554c68796bd9deae82210377b9649
   </head>
 </html>
