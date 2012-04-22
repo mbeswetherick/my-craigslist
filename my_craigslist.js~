@@ -5,6 +5,13 @@ getPageContents();
 
 var priceArray = [];
 
+url = $(location).attr('href');
+url = url.split('.');
+split = url[2].split('/')
+sub = split[1]
+
+
+
 function getPageContents(){
 	//date
 	var date = $('.ban');
@@ -32,10 +39,10 @@ function getPageContents(){
 			var url = $(location).attr('href');
 			url = url.split('.');
 			console.log(url[0].split('/')[2]);
-			//category
-			category = $('a[href$="pta/"]').text();
-			category = category.split('-');
-			category = category[0];
+			//category cntd
+			category = $(".bchead").children('a');
+			category = $(category).text();
+			console.log(category);
 		} catch (TypeError) {}
 	});
 }
