@@ -2,10 +2,9 @@ priceArray = [];
 priceArray = getPageContents(priceArray);
 maximum = maximum(priceArray);
 minimum = minimum(priceArray);
-console.log(maximum);
-console.log(minimum);
+average = average(priceArray);
 range = range(maximum, minimum);
-addChartDiv();
+addChartDiv(maximum,minimum,average,range);
 
 
 function getPageContents(priceArray){
@@ -77,6 +76,20 @@ function getPageContents(priceArray){
 	return priceArray;
 }
 
+
+function average(data){
+	sum = 0;
+		for(var i=0; i<data.length; i++) {
+			try {
+				if(data[i][0] == undefined){
+					data[i][0] = 0;
+				}
+				sum += data[i][0];
+			} catch (TypeError) { continue;}
+		}
+	return sum / data.length;
+}
+
 function maximum(data){
 	maximum = 0;
 	current = 0;
@@ -144,15 +157,15 @@ function range(maximum, minimum){
 var my_div = null;
 var newDiv = null;
 
-function addChartDiv()
+function addChartDiv(maximum,minimum,average,range)
 {
   // create a new div element
 
-  newDiv = document.createElement("a");
-  newDiv.setAttribute("href", "https://chart.googleapis.com/chart?chs=250x100&chd=t:60,40&cht=p3&chl=Hello|World");
+  newDiv = document.createElement("img");
+  newDiv.setAttribute("src", "https://chart.googleapis.com/chart?chxt=x,y&cht=bvs&chd=s:cEj9U&chco=F2C2E1&chs=400x400&chbh=a,30,30&chxl=0:|Maximum|Minimum|Average|Range&chd=t:"+maximum+","+minimum+","+average+","+range);
 
 
   // add the newly created element and it's content into the DOM
-  my_div = document.getElementById("showPics");
+  my_div = document.getElementById("hidePics");
   document.body.insertBefore(newDiv, my_div);
 }
