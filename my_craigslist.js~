@@ -56,8 +56,7 @@ function getPageContents(priceArray){
 			//general location
 			var url = $(location).attr('href');
 			url = url.split('.');
-			//console.log(url[0].split('/')[2]);
-			//postArray[5] = url[0].split('/')[2];
+			postArray[5] = url[0].split('/')[2];
 			//category
 			category = $(".bchead").children('a');
 			category = category[2];
@@ -162,7 +161,8 @@ function addChartDiv(maximum,minimum,average,range)
   // create a new div element
 
   newDiv = document.createElement("img");
-  newDiv.setAttribute("src", "https://chart.googleapis.com/chart?chds=0,600& chxt=x,y&cht=bvs&chd=s:cEj9U&chco=F2C2E1&chs=400x400&chbh=a,30,30&chxl=0:|Maximum|Minimum|Average|Range&chd=t:"+maximum+","+minimum+","+average+","+range);
+	newDiv.setAttribute("style","margin-left:35%");
+  newDiv.setAttribute("src", "https://chart.googleapis.com/chart?chtt=Cost Breakdown&chxt=x,y&chxr=1,0,"+maximum+"&cht=bvs&chd=s:cEj9U&chco=F2C2E1&chs=400x400&chbh=a,30,30&chxl=0:|Maximum|Minimum|Average|Range&chd=t:"+maximum+","+minimum+","+average+","+range);
 
 
   // add the newly created element and it's content into the DOM
